@@ -1,4 +1,4 @@
-public class MinimumCostVenueDecorator{
+public class MinimumCostVenueDecorator {
     
     public static int findMinimumCost (int[][] matrix){
 
@@ -13,20 +13,16 @@ public class MinimumCostVenueDecorator{
         int excludeColumn = -1;
 
         for (int i = 0; i < n; i++) { // looping through each venue
-            int minimum = matrix[i][0];
+            int minimum = Integer.MAX_VALUE; // setting its initial value to the highest possible integer value
 
             for (int j = 0; j < k; j++){ // looping through each theme
-
-                if (j == excludeColumn){
-                    continue; // as adjacent venues should not have the same theme
-                }
-
-                if (matrix[i][j] < minimum) {
-                    minimum = matrix[i][j];
+                if (j != excludeColumn){
+                    minimum = Math.min(minimum, matrix[i][j]);
                 }
             }
-            storeMinimum += minimum; // adding the minimum cost
 
+            storeMinimum += minimum; // adding the minimum cost
+            
             // Updating the `excludeColumn` variable separately ensures accurate exclusion
             // of the previously chosen column during comparisons in subsequent row iterations
 
@@ -39,6 +35,7 @@ public class MinimumCostVenueDecorator{
                     break;
                 }
             }
+
         }
         return storeMinimum;
     }
@@ -46,12 +43,12 @@ public class MinimumCostVenueDecorator{
     public static void main(String[] args) {
         
         int[][] costMatrix = {
-            {20, 12, 8},
-            {35, 12, 92},
-            {9, 4, 70}
+            {1, 3, 2}, 
+            {4, 6, 8}, 
+            {3, 1, 5}
         };
 
-        int minimunCost = findMinimumCost(costMatrix);
-        System.out.println("Minimum cost:" + minimunCost);
+        int minimumCost = findMinimumCost(costMatrix);
+        System.out.println("Minimum cost: " + minimumCost);
     }
 }
