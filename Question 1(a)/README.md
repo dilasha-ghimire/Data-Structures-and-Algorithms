@@ -32,3 +32,18 @@ I have used the approach of nested looping. The outer loop is for iterating thro
 
 First you loop through each row, representing different venues. Then for each column in that row representing different themes, then you find the minimum of each row. Once you find the minimum, you store the index where you have found the minimum value at. In the next iteration, that index will be skipped as adjacent venues can't have the same theme. The loop continues until all the rows are completed and at the end you will get the minimum cost to decorate all the venues while
 satisfying the adjacency constraint.
+
+---
+## Test cases
+
+1.  Input: [[15, 34, 27], [42, 69,  83], [30, 10, 50]] 
+  
+    Output: 114 units
+
+2.  Input: [[1, 2, 3], [1, 99,  100], [2, 3, 4]] 
+
+    Output: 102 units
+
+3.  Input: [[1, 2, 3], [2, 1, 3], [3, 2, 1]]  
+    
+    Output: 3 units
