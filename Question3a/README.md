@@ -12,6 +12,8 @@ The ScoreTracker class is a Java implementation designed to facilitate the track
 
 ## Example
 
+``` java
+
         ScoreTracker scoreTracker = new ScoreTracker(); 
         // Creating an instance of ScoreTracker class
 

@@ -12,6 +12,8 @@ This Java program implements a method to find the closest values to a target in 
 
 ## Examples
 
+``` java
+
         Node root = new Node(5); 
         root.leftChildNode = new Node(3); 
         root.rightChildNode = new Node(7); 
@@ -25,7 +27,8 @@ This Java program implements a method to find the closest values to a target in 
 
         Output - [2, 3, 4, 5]
 
----
+```
+``` java
 
         Node root = new Node(10); 
         root.leftChildNode = new Node(5); 

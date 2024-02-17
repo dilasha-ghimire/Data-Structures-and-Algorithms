@@ -33,6 +33,8 @@ You can also define custom distance matrices to represent different TSP instance
 
 ## Example
 
+``` java
+
     int[][] distanceMatrix = {
                 {0, 2, 3, 4},
                 {2, 0, 6, 1},
@@ -62,7 +64,8 @@ You can also define custom distance matrices to represent different TSP instance
 
         Node 0: Return to node 0 to complete the tour.
 
----
+```
+``` java
 
     int[][] distanceMatrix = {
             {0, 3, 4, 2},
