@@ -54,7 +54,7 @@ public class ScoreTracker { // Declaring a public class named ScoreTracker
         // Output: 87.8 
 
         scoreTracker.addScore(81.2); // Adding another score to the tracker
-        //scoreTracker.addScore(88.7); // Adding another score to the tracker
+        scoreTracker.addScore(88.7); // Adding another score to the tracker
         double median2 = scoreTracker.getMedianScore(); // Recalculating the median score
         System.out.println("Median 2: " + median2); // Printing the recalculated median
     
